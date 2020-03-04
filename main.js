@@ -1,7 +1,52 @@
 /******************
  * YOUR CODE HERE *
  ******************/
+const call = function(arr){
+arr();
+}//this is how I can callback the function.
 
+const callTwice = function (twice){
+  twice();
+  twice();
+}
+
+const callXTimes = function (func, value){
+  for(i = 0; i < value; i++ ) {
+    func();
+    }
+} 
+
+const returnFromFunc = function (func){
+return func();
+}
+
+const modifyString = function (string, func){
+return func(string);
+} 
+
+const modifyNumber = function (num, func){
+return func(num);
+}
+
+const modifyAnything = function (value, func){
+return func(value);
+}
+
+const twoFuncs = function (func1,func2){
+return func2(func1());
+}
+
+const threeFuncs = function (func1,func2,func3){
+return func3(func2(func1()));
+}
+
+const twoValues = function(value, value2, func){
+return func(value, value2);
+}
+
+const twoValuesRTL = function (value, value2, func){
+return func(value2, value);
+}
 
 
 
@@ -63,6 +108,7 @@ module.exports = {
   modifyNumber,
   modifyAnything,
   twoFuncs,
+  threeFuncs,
   twoValues,
   twoValuesRTL,
 }
